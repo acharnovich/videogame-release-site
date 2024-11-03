@@ -16,7 +16,7 @@ func UpcomingGamesHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	tmplPath := filepath.Join("views", "upcoming_games.html")
+	tmplPath := filepath.Join("views", "templates", "upcoming_games.html")
 	tmpl := template.Must(template.ParseFiles(tmplPath))
 
 	if err := tmpl.Execute(w, games); err != nil {
@@ -33,7 +33,7 @@ func MostActiveGamesHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	tmplPath := filepath.Join("views", "most_active_games.html")
+	tmplPath := filepath.Join("views", "templates", "most_active_games.html")
 	tmpl := template.Must(template.ParseFiles(tmplPath))
 
 	if err := tmpl.Execute(w, games); err != nil {
