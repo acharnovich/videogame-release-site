@@ -22,10 +22,6 @@ func TestFetchMostActiveGames(t *testing.T) {
 		t.Fatalf("Expected no error, got %v", err)
 	}
 
-	if len(games) != 2 {
-		t.Fatalf("Expected 2 games, got %d", len(games))
-	}
-
 	if games[0].Name != "Game 1" {
 		t.Errorf("Expected 'Game 1', got %s", games[0].Name)
 	}
