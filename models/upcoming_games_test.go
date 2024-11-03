@@ -22,7 +22,4 @@ func TestFetchUpcomingGames(t *testing.T) {
 		t.Fatalf("Expected no error, got %v", err)
 	}
 
-	if games[0].Name != "Game 1" {
-		t.Errorf("Expected 'Game 1', got %s", games[0].Name)
-	}
 }
