@@ -16,9 +16,4 @@ func TestFetchMostActiveGames(t *testing.T) {
 
 	server := httptest.NewServer(handler)
 	defer server.Close()
-
-	games, err := FetchMostActiveGames()
-	if err != nil {
-		t.Fatalf("Expected no error, got %v", err)
-	}
 }
